@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
   })
 
 app.get('/url',async (req, res) => {
+try {
     const text = req.query.link
     if(!text) return res.json('{messages : "error url not found"}')
     let link = await getOriginalUrl(text)
@@ -41,6 +42,9 @@ app.get('/url',async (req, res) => {
          js1 : st.js1,
          js2 : st.js2
      })
+} catch (e) {
+   res.send(`maaf error, ${e?.response?.data}`)
+}
 }) 
 
 app.listen(3000, () => console.log('Server started 3000'));
