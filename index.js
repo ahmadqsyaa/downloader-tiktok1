@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 
 app.get('/url',async (req, res) => {
     const text = req.query.link
-    if(!text) return res.status(404)
+    if(!text) return res.json('{messages : "error url not found"}')
     let link = await getOriginalUrl(text)
     let id = getIDVideo(link)
     let { data } = await axios.get(`https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/feed/?aweme_id=${id}`);
