@@ -1,0 +1,11 @@
+name = "my-worker"
+main="index.js"
+compatibility_date = "2023-07-05"
+account_id = "0000000111111111111111111"
+node_compat = true
+
+[triggers]
+crons = [ "* * * * *" ]
+
+[build]
+command="npm run dev"

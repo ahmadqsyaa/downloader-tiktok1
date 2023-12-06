@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="uk-background-secondary">
+    <head>
+        <title>tiktok downloader</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+             <%- css %>
+        </style>
+        
+        <script type="text/javascript">
+            <%- js1 %>
+        </script>
+        <script type="text/javascript">
+            <%- js2 %>
+        </script>
+    </head>
+    <body>
+        <div class="uk-container uk-margin-medium-top uk-margin-medium-bottom uk-container-large">
+            <div class="uk-border-rounded uk-background-secondary uk-card uk-card-body uk-light">
+                <div class="">
+                    <h2 class="uk-text-bold uk-text-center">TIKTOK DOWNLOADER</h2>
+                </div>
+                <div class="uk-margin uk-inline">
+                <video controls autoplay loop playsInline>
+                    <source src="<%= datas %>" type="video/mp4" alt="<%= title %>"/>
+                </video>
+                <samp class="uk-position-top-center uk-overlay uk-overlay-default">klik & tahan video lalu klik download</samp>
+                </div>
+                <div>
+                    <samp class="uk-text-truncate uk-panel"><%= title %></samp>
+                    <span>like : <span class="uk-badge"><%= like %></span></span>
+                    <span>comment : <span class="uk-badge"><%= comment %></span></span>
+                    <span>share : <span class="uk-badge"><%= share %></span></span>
+                </div>
+                <div class="uk-margin-top">
+                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="<%= music %>">download music</a>
+                </div>
+                <div class="uk-margin-top">
+                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="http://192.168.1.1:3000">download lagi</a>
+                </div>
+                <div class="uk-margin-small-top">
+                    <span>error? report <a href="mailto:rickqsyaerick06@rickk.biz.id">here</a></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

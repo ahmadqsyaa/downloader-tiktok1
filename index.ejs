@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="uk-background-secondary">
+    <head>
+        <title>tiktok downloader</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+             <%- css %>
+        </style>
+        
+        <script type="text/javascript">
+            <%- js1 %>
+        </script>
+        <script type="text/javascript">
+            <%- js2 %>
+        </script>
+    </head>
+    <body>
+        <div class="uk-container uk-margin-medium-top uk-container-large">
+            <div class="uk-border-rounded uk-background-secondary uk-card uk-card-body uk-light">
+                <div class="">
+                    <h2 class="uk-text-center uk-text-bold">TIKTOK DOWNLOADER</h2>
+                </div>
+                <div class="uk-margin">
+                    <input id="urls" class="uk-border-rounded uk-input" type="url" placeholder="masukan link vt tiktok" aria-label="Input" required>
+                </div>
+                <div>
+                    <button onclick="send()" class="uk-border-rounded uk-button uk-button-default uk-width-1-1">download</button>
+                </div>
+                <div class="uk-margin-top">
+                    <p>error? report <a href="mailto:rickqsyaerick06@rickk.biz.id">here</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var x = document.getElementById("urls");
+        function send() {
+            if (x.value == "") {
+        alert("silahkan masukan link terlebih dahulu!")
+        } else {
+        window.location.href =`http://192.168.1.1:3000/url?link=${x.value}`;
+        }}
+
+    </script>
+</html>
