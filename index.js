@@ -5,7 +5,6 @@ const fs = require('node:fs');
 const { getIDVideo, getOriginalUrl, serializeResult } = require(path.join(__dirname, '.','main'));
 const app = express();
 const a = path.join(__dirname, '.', 'index.ejs')
-const b = path.join(__dirname, '.', 'index0.ejs')
 const ap = path.join(__dirname, '.', 'index1.ejs')
 const st = {
          style : fs.readFileSync('./uikit.min.css','utf8'),
@@ -15,14 +14,10 @@ const st = {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-     const err = req.query.err
-     if(!err) return res.send('hi')
-     
      res.render(b, {
          css : st.style,
          js1 : st.js1,
-         js2 : st.js2,
-         err : err
+         js2 : st.js2
      });
   })
 
@@ -47,7 +42,7 @@ try {
          js2 : st.js2
      })
 } catch (e) {
-   res.redirect(`/?err=${e}`);
+   res.redirect(`/`);
 }
 }) 
 
