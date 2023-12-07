@@ -14,7 +14,7 @@ const st = {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-     res.render(b, {
+     res.render(a, {
          css : st.style,
          js1 : st.js1,
          js2 : st.js2
