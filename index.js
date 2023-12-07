@@ -16,12 +16,8 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
      const err = req.query.err
-     if(!err) return 
-     res.render(a, {
-         css : st.style,
-         js1 : st.js1,
-         js2 : st.js2
-     });
+     if(!err) return res.send('hi')
+     
      res.render(b, {
          css : st.style,
          js1 : st.js1,
