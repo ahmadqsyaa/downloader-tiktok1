@@ -14,10 +14,12 @@ const st = {
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+        var er = req.query.err
      res.render(a, {
          css : st.style,
          js1 : st.js1,
-         js2 : st.js2
+         js2 : st.js2,
+         err : er
      });
   })
 
@@ -42,7 +44,7 @@ try {
          js2 : st.js2
      })
 } catch (e) {
-   res.redirect(`/`);
+   res.redirect(`/?err=true`);
 }
 }) 
 
