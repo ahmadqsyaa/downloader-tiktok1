@@ -14,30 +14,40 @@
         <script type="text/javascript">
             <%- js2 %>
         </script>
-    </head>
-    <body>
-        <div class="uk-container uk-margin-medium-top uk-margin-medium-bottom uk-container-large">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+        <script>
+        function load() {
+            Swal.fire({
+                title: 'cara download videonya',
+                text: 'klik titik 3 pojok kiri video, lalu klik download video',
+                imageUrl: 'https://telegra.ph/file/63b3e28b53b3a616541e7.png',
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: 'tutorial download'})
+        }
+        </script>
+        </head>
+    <body onload="load();">
+        <div class="uk-container uk-margin-small-top uk-margin-medium-bottom uk-container-large">
             <div class="uk-border-rounded uk-background-secondary uk-card uk-card-body uk-light">
                 <div class="">
                     <h2 class="uk-text-bold uk-text-center">TIKTOK DOWNLOADER</h2>
                 </div>
-                <div class="uk-margin uk-inline">
-                <video controls autoplay loop playsInline>
-                    <source src="<%= datas %>" type="video/mp4" alt="<%= title %>"/>
-                </video>
-                <samp class="uk-position-top-center uk-overlay uk-overlay-default">klik & tahan video, lalu klik download</samp>
+                <div class="uk-border-rounded uk-background-muted uk-card uk-card-default uk-card-body">
+                <center><video src="<%= datas %>" width="250" height="250" controls uk-video></video></center>
                 </div>
-                <div>
+                <div class="uk-margin">
                     <samp class="uk-text-truncate uk-panel"><%= title %></samp>
                     <span>like : <span class="uk-badge"><%= like %></span></span>
                     <span>comment : <span class="uk-badge"><%= comment %></span></span>
                     <span>share : <span class="uk-badge"><%= share %></span></span>
                 </div>
                 <div class="uk-margin-top">
-                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="<%= music %>" download>download music</a>
+                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="<%= music %>">download music</a>
                 </div>
                 <div class="uk-margin-top">
-                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="https://tiktok.cyclic.app">download lagi</a>
+                    <a class="uk-border-rounded uk-button uk-button-default uk-width-1-1" href="http://192.168.1.1:3000">download lagi</a>
                 </div>
                 <div class="uk-margin-small-top">
                     <span>error? report <a href="mailto:rickqsyaerick06@rickk.biz.id">here</a></span>
